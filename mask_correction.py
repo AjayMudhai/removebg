@@ -59,8 +59,11 @@ def denoising(img):
 
 
 def main(src_pth,dst_pth):
+    c=1
     for root,dirs,files in os.walk(src_pth):
         for file in files:
+            print('{}/{}'.format(c,len(files)))
+            c+=1
             try:
                 op=os.path.join(root,file)
                 img=cv2.imread(op)
