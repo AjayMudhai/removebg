@@ -74,8 +74,8 @@ def main(src_pth,dst_pth):
                 pass
 
 
-src_pth='/home/ajay/Documents/Spyne/RemoveBG/data_prep/masks'
-dst_pth='/home/ajay/Documents/Spyne/RemoveBG/data_prep/mask4'
+src_pth='/datadrive/RemoveBG/data/car_inner_final_dataset/masks'
+dst_pth='/datadrive/RemoveBG/data/car_inner_final_dataset/corrected_masks'
 main(src_pth,dst_pth)
 
         
