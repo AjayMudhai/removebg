@@ -5,7 +5,7 @@ import shutil
 
 
 def namer(isrc_pth,idst_pth,msrc_pth,mdst_pth):
-    c=0
+    c=4000
     for root,dirs,files in os.walk(isrc_pth):
         for file in files:
             iop=os.path.join(root,file)
@@ -20,9 +20,9 @@ def namer(isrc_pth,idst_pth,msrc_pth,mdst_pth):
                 shutil.move(mop,mnnp)
 
         
-isrc_pth='/datadrive/RemoveBG/data/Images'
+isrc_pth='/datadrive/RemoveBG/data/data2/image2'
 idst_pth='/datadrive/RemoveBG/data/im2'
-msrc_pth='/datadrive/RemoveBG/data/mask'
+msrc_pth='/datadrive/RemoveBG/data/data2/masks2'
 mdst_pth='/datadrive/RemoveBG/data/msk2'
 
 ###
