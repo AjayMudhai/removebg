@@ -167,7 +167,7 @@ def muti_bce_loss_fusion(d0, d1, d2, d3, d4, d5, d6, labels_v):
 
 model_name = 'u2net' #'u2netp'
 
-data_dir = "./data/final_aug_dataset_cars/"
+data_dir = "./data/"
 tra_image_dir = 'images/'
 tra_label_dir = 'masks/' 
 
@@ -175,9 +175,9 @@ image_ext = '.jpg'
 label_ext = '.jpg'
 
 # model_dir = './models/'
-saved_model_dir = '/mnt/saved_models/u2net.pth'
-saved_model_dir_cur = '/mnt/curr_output_models/u2net.pth'
-output_model_dir = "/mnt/curr_output_models/"
+saved_model_dir = './saved_models/u2net.pth'
+saved_model_dir_cur = './curr_output_models/u2net.pth'
+output_model_dir = "./curr_output_models/"
 if not os.path.exists(output_model_dir):
     os.makedirs(output_model_dir)
 # if not os.path.exists(saved_model_dir):
