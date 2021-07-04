@@ -20,7 +20,7 @@ from data_loader import ToTensorLab
 from data_loader import SalObjDataset
 
 from model.u2net import U2NET
-from azure.storage.blob import BlockBlobService
+# from azure.storage.blob import BlockBlobService
 
 from u2net_test import normPRED, save_output 
 import zipfile
@@ -128,24 +128,24 @@ def muti_dice_bce_loss_fusion(d0, d1, d2, d3, d4, d5, d6, labels_v):
 
 bce_loss = nn.BCELoss(size_average=True)
 
-def upload_file_to_azure(root_path, file_name, save_model=True):
+# def upload_file_to_azure(root_path, file_name, save_model=True):
 
-    account_name = 'apimodel'
-    account_key = 'Y+gW3VKqi6DdjFyNYxiv2hI6ZmMe5lngmVlTOte2MP70brdKcVN0b4qx8vk/3xtPoGlgP1ei0TOEhmewAba1Gg=='
-    container_name = 'model-shadow-weights-512'
+#     account_name = 'apimodel'
+#     account_key = 'Y+gW3VKqi6DdjFyNYxiv2hI6ZmMe5lngmVlTOte2MP70brdKcVN0b4qx8vk/3xtPoGlgP1ei0TOEhmewAba1Gg=='
+#     container_name = 'model-shadow-weights-512'
 
-    block_blob_service = BlockBlobService(
-        account_name=account_name,
-        account_key=account_key
-    )
+#     block_blob_service = BlockBlobService(
+#         account_name=account_name,
+#         account_key=account_key
+#     )
 
-    # for file_name in file_names:
-    if(save_model):
-        blob_name = f"piyush-cars-removebg/{file_name}"
-    else:
-        blob_name = f"piyush-cars-removebg/test_dataset_output/{file_name}"
-    file_path = f"{root_path}/{file_name}"
-    block_blob_service.create_blob_from_path(container_name, blob_name, file_path)
+#     # for file_name in file_names:
+#     if(save_model):
+#         blob_name = f"piyush-cars-removebg/{file_name}"
+#     else:
+#         blob_name = f"piyush-cars-removebg/test_dataset_output/{file_name}"
+#     file_path = f"{root_path}/{file_name}"
+#     block_blob_service.create_blob_from_path(container_name, blob_name, file_path)
 
 def muti_bce_loss_fusion(d0, d1, d2, d3, d4, d5, d6, labels_v):
 
@@ -315,7 +315,7 @@ def test_on_val_set(model, model_name):
     zipf = zipfile.ZipFile(model_name+'.zip', 'w', zipfile.ZIP_DEFLATED)
     zipdir(dir_name, zipf)
     zipf.close()
-    upload_file_to_azure("./", model_name+'.zip',save_model=False)
+    # upload_file_to_azure("./", model_name+'.zip',save_model=False)
 
     os.remove(model_name+'.zip')
  
@@ -392,7 +392,7 @@ for epoch in range(0, epoch_num):
             torch.save(net.state_dict(), saved_model_dir)
             filename = model_name+"_size_720_bce_itr_%d_train_%3f_tar_%3f.pth" % (ite_num, running_loss / ite_num4val, running_tar_loss / ite_num4val)
             torch.save(net.state_dict(), output_model_dir+filename)
-            upload_file_to_azure(output_model_dir, filename,save_model=True)
+            # upload_file_to_azure(output_model_dir, filename,save_model=True)
             # az.upload_file(filename, filepath)
             # print("file_uploaded")
             # s3.Bucket(bucketname).upload_file(filepath, os.path.join("24_million",filename))
