@@ -1,7 +1,7 @@
 import os
 from os import listdir
 from PIL import Image
-
+from skimage import io, transform, color
 
 def file_tester(src_pth,msk_pth):
     a=[]
@@ -13,10 +13,10 @@ def file_tester(src_pth,msk_pth):
             op=os.path.join(root,file)
             mop=os.path.join(msk_pth,file)
             try:
-                img = Image.open(op) # open the image file
-                img.verify() # verify that it is, in fact an image
-                img = Image.open(mop) # open the image file
-                img.verify()
+                img = io.imread(op)
+                img = io.imread(mop) # open the image file
+                 # verify that it is, in fact an image
+              
             except (IOError, SyntaxError) as e:
                 print('Bad file:', file)
                 os.remove(op)
