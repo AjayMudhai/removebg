@@ -49,8 +49,8 @@ def muti_bce_loss_fusion(d0, d1, d2, d3, d4, d5, d6, labels_v):
 model_name = 'u2net' #'u2netp'
 
 data_dir = '/datadrive/RemoveBG/data'
-tra_image_dir = '/datadrive/RemoveBG/data/images'
-tra_label_dir = '/datadrive/RemoveBG/data/masks'
+tra_image_dir = 'images'
+tra_label_dir = 'masks'
 
 image_ext = '.jpg'
 label_ext = '.jpg'
