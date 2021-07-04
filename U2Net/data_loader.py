@@ -258,7 +258,7 @@ class SalObjDataset(Dataset):
 			if(0==len(self.label_name_list)):
 				label_3 = np.zeros(image.shape)
 			else:
-				print((self.label_name_list[idx]))
+				# print((self.label_name_list[idx]))
 				label_3 = io.imread(self.label_name_list[idx])
 
 			label = np.zeros(label_3.shape[0:2])
