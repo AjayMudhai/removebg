@@ -16,6 +16,8 @@ def namer(isrc_pth,idst_pth,msrc_pth,mdst_pth):
                 c+=1
                 innp=os.path.join(idst_pth,name)
                 mnnp=os.path.join(mdst_pth,name)
+                shutil.move(iop,innp)
+                shutil.move(mop,mnnp)
 
         
 isrc_pth='/datadrive/RemoveBG/data/car_inner_final_dataset/images'
