@@ -25,6 +25,7 @@ idst_pth='/datadrive/RemoveBG/data/im2'
 msrc_pth='/datadrive/RemoveBG/data/mask'
 mdst_pth='/datadrive/RemoveBG/data/msk2'
 
+###
 namer(isrc_pth,idst_pth,msrc_pth,mdst_pth)
 
 
