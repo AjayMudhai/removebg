@@ -20,10 +20,10 @@ def namer(isrc_pth,idst_pth,msrc_pth,mdst_pth):
                 shutil.move(mop,mnnp)
 
         
-isrc_pth='/datadrive/RemoveBG/data/car_inner_final_dataset/images'
-idst_pth='/datadrive/RemoveBG/data/images'
-msrc_pth='/datadrive/RemoveBG/data/car_inner_final_dataset/masks'
-mdst_pth='/datadrive/RemoveBG/data/masks'
+isrc_pth='/datadrive/RemoveBG/data/Images'
+idst_pth='/datadrive/RemoveBG/data/im2'
+msrc_pth='/datadrive/RemoveBG/data/mask'
+mdst_pth='/datadrive/RemoveBG/data/msk2'
 
 namer(isrc_pth,idst_pth,msrc_pth,mdst_pth)
 
