@@ -179,7 +179,8 @@ saved_model_dir = './saved_models/u2net.pth'
 saved_model_dir_cur = './curr_output_models/u2net.pth'
 output_model_dir = "./curr_output_models/"
 if not os.path.exists(output_model_dir):
-    os.makedirs(output_model_dir)
+    # os.makedirs(output_model_dir)
+    os.system('sudo mkdir {}'.format(output_model_dir))
 # if not os.path.exists(saved_model_dir):
     # s3.Bucket('peoplesegmentation').download_file('/u2_net/base_model/u2net.pth', saved_model_dir)
 # if not os.path.exists(model_dir):
