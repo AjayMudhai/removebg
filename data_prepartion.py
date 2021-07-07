@@ -30,7 +30,7 @@ def namer(isrc_pth,idst_pth,msrc_pth,mdst_pth):
 
 
 def get_masks(isrc_pth,idst_pth,msrc_pth,mdst_pth):
-    c=4000
+    c=5000
     for root,dirs,files in os.walk(msrc_pth):
         for file in files:
             print('{}/{}'.format(c,len(files)))
@@ -44,9 +44,9 @@ def get_masks(isrc_pth,idst_pth,msrc_pth,mdst_pth):
                 shutil.move(mop,mnnp)
                 shutil.move(iop,innp)
 
-isrc_pth='/datadrive/RemoveBG/removebg/U2Net/data/olx/Final/images'
+isrc_pth='/datadrive/RemoveBG/removebg/U2Net/data/olx/karvi_new/images'
 idst_pth='/datadrive/RemoveBG/removebg/U2Net/data/olx/Images'
-msrc_pth='/datadrive/RemoveBG/removebg/U2Net/data/olx/Final/mask'
+msrc_pth='/datadrive/RemoveBG/removebg/U2Net/data/olx/karvi_new/mask'
 mdst_pth='/datadrive/RemoveBG/removebg/U2Net/data/olx/Masks'
 get_masks(isrc_pth,idst_pth,msrc_pth,mdst_pth)
 
