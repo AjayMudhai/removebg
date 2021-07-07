@@ -33,7 +33,7 @@ def get_masks(isrc_pth,idst_pth,msrc_pth,mdst_pth):
     c=1
     for root,dirs,files in os.walk(msrc_pth):
         for file in files:
-            print('{}/{}'.format())
+            print('{}/{}'.format(c,len(files)))
             mop=os.path.join(root,file)
             iop=os.path.join(isrc_pth,file)
             if os.path.exists(iop):
