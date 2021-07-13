@@ -77,45 +77,45 @@ class BulkTesting:
                     # print(url)
                     # n=input()
     ################################################################
-                    # try:
-                    response2 = requests.request("POST",self.model_route,data=payload)
-                    transparent_url = response2.json()['url']
+                    try:
+                        response2 = requests.request("POST",self.model_route,data=payload)
+                        transparent_url = response2.json()['url']
+                        
+                        
+                        
+                        
+                        r=requests.get(transparent_url)
+                        
                     
+                        temp_pth=os.path.join(self.temp_dir,name)
+                        open(temp_pth,'wb').write(r.content)
+                        # open(os.path.join(self.edited_dir,name+"_output.png"),'wb').write(r.content)
+                        output=cv2.imread(temp_pth,cv2.IMREAD_UNCHANGED)
+                        w,h,_=output.shape
+                        output=Image.fromarray(output.astype("uint8"))
+                        
+                        wbg_img=Image.new("RGB",(h,w),(255,255,255))
+                        wbg_img.paste(output,(0,0),output)
+                        output=np.array(wbg_img, dtype=np.uint8)
                     
-                    
-                    
-                    r=requests.get(transparent_url)
-                    
-                
-                    temp_pth=os.path.join(self.temp_dir,name)
-                    open(temp_pth,'wb').write(r.content)
-                    # open(os.path.join(self.edited_dir,name+"_output.png"),'wb').write(r.content)
-                    output=cv2.imread(temp_pth,cv2.IMREAD_UNCHANGED)
-                    w,h,_=output.shape
-                    output=Image.fromarray(output.astype("uint8"))
-                    
-                    wbg_img=Image.new("RGB",(h,w),(255,255,255))
-                    wbg_img.paste(output,(0,0),output)
-                    output=np.array(wbg_img, dtype=np.uint8)
-                
-                    self.save_outputs(img,output,name)
-                    os.remove(temp_pth)
-                    pcount+=1
-                    # except:
-                    #     print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-                    #     print('Failed for :{}.'.format(file))
-                    #     print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-                    #     self.failed_list.append(file)
-                    #     fcount+=1
-                    #     n=input()
+                        self.save_outputs(img,output,name)
+                        os.remove(temp_pth)
+                        pcount+=1
+                    except:
+                        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                        print('Failed for :{}.'.format(file))
+                        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+                        self.failed_list.append(file)
+                        fcount+=1
+                        n=input()
 
-                    # e_time=time.time()
-                    # processing_time=e_time-s_time
-                    # Total_time=Total_time+processing_time
-                    # s_time=e_time
-                    # print('Processed : {}/{}    {}'.format(pcount,len(files),processing_time))
-                    # print('Failed    : {}/{}'.format(fcount,len(files)))
-                    # print('Failed : {}'.format(self.failed_list))
+                    e_time=time.time()
+                    processing_time=e_time-s_time
+                    Total_time=Total_time+processing_time
+                    s_time=e_time
+                    print('Processed : {}/{}    {}'.format(pcount,len(files),processing_time))
+                    print('Failed    : {}/{}'.format(fcount,len(files)))
+                    print('Failed : {}'.format(self.failed_list))
                     
     
 
