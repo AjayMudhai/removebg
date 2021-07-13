@@ -20,7 +20,7 @@ class BulkTesting:
         self.model_route2="http://34.95.80.165/models/replacecarbg/"
         # self.model_route2="http://52.177.21.16/automobile/reflection_bg/"
         parent_dir=pathlib.Path().absolute()
-        self.edited_dir=os.path.join(parent_dir,'edited')
+        self.edited_dir='/datadrive/RemoveBG/removebg/U2Net/data/img_wbg'
         self.combined_dir=os.path.join(parent_dir,'combined')
         self.temp_dir=os.path.join(parent_dir,'temp')
         if not os.path.exists(self.edited_dir):
