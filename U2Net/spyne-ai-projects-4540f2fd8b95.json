@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "spyne-ai-projects",
+  "private_key_id": "4540f2fd8b95f9501dc0b65484bf0e1739382a21",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDRnAiYEoX1mAY7\nDEGG86PHhdGECpxX4NFkTqdr/2Hjet4A0tx2Y8OsZZvk3w+N1W2FpMs5P2FGzF/j\nTOYMthF66LgXqPUC3o4Io8sdYIsFdA8K+PXamB5gbEcycqvXRSuIzh/v5YrBeG69\nCegCoaWpHK8rXOfatoRN62Ku9iHppRCej5qGrTpBkEeK2+uswrAmi0WauClg5mFV\nEHj0ALTSAjslv59PEJQscHpDyYTHm3P7Gz2z44jbxBhCatq7OomNZfFfAPr1YaKR\naOIlFSAwnmozVAv3XfsGxl8jBZ86yWjzk+9qbILrkAKNKU7AvCPX548cgAh84g4J\n8YmQW60xAgMBAAECggEAIdv1LW+MkSQaGY68xQp1UeUld5FpOO7ZlDz6YYEy9Fak\nJvjo4PzznlUZjiqULiKkWvrIUzqQQaoA8Uw6OyJsB3ExT60cyvZddjrTNC8kteBO\nD8UwnbuF6KiFBbqtVIxZYHN/iDaJqAAGz2Waw1YOVxeJmlUbJOLn01hrK/0ZdE7J\nXiwr5oQqWq13X35AhKjJNrjT5hveLBg2F1MAwJ7ETFf7VcgKcb9cT1NSJ20hXsPg\n2Ra/twB++x1y8GQMxpOlcNRDDnfAflCiil/DyB+gCj9vtOBAfaTLeSwhjlcyAvdx\nX9U7LmrBXg0cuxzF+CebFkKX2zl666ok8PKRBXrPuwKBgQDoC4KFzDFundfsNX0j\nutMga6ckaYHLwXvwaRrNb8g5AyDTRJofLRZ5j9IZkSVQxanAdd4gVRBcD+l+4f53\ny2hJoF8Vax/NfI33T3Wwnk8JCfjOAMRhP1p/5wGUKcKdUL5H5TwmAtRGev42fP7h\ncaPrJeco/WwKqWDANi58G7FY5wKBgQDnP5lVU0+CfloCrydtwutL41JuhufwAf7X\nBzwAL5WGXFxwKt4WHO195cPohUs1CbA5+MPAVlHmWipG0vXhPCcgkBE5TPta9Mqa\ntHq6dVEbeHE1nGrzOvNoy42kEOGYS+uQTz6BHzIxwY3+Z3MabYNv/XfqEs9P1cbP\n1o4CuuGOJwKBgDv5tZu1glVP8N45mQWiJS2tBX9w0b6DXPBviiDtMngh6dsRUTCb\nq8JxvOEk1dtBq7V2AZqjwd25syU7blUyOttE2y6jCI5JEjyIyieDU3RHoopEQn3M\nLSz/3TWZcZbNptDYXCqK8qjg41HcDtjgUXjWzB+ZGNLMopgrqOolEjqjAoGAJfhq\na/k+//VRQEmUVtB/pDlSSrW6Fc2uE46rinhFvAckYoKXbtgXIun8Tgy8+Zt6pTo0\nojtKPWGmuXRgTTh8UDt3qIn8Z8X0Eoz57e3fgHw5Uo05fnC6kQWDX2IqOMCWkF6C\nq978dfELKK/B1aAPye67puKpybkXaP8Y2FfpO1cCgYAqLgPI6Jes1shst+O5dRNh\nJKm12fCods3wDloZgX1s0wKgCWAyY4qG2cxDfowH5LOJojMrRtO9CphDiujJ+8VU\nLgVRfjAZFI4QiWZPnRZHtWB+yg9eT02249KAVStcusm/1NicTWz64VS5e2w7Croq\nJKHR8E8ByVfDzg9ct6F+Bg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "spyne-ai-projects@appspot.gserviceaccount.com",
+  "client_id": "116315133758613114138",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spyne-ai-projects%40appspot.gserviceaccount.com"
+}
