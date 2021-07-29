@@ -195,7 +195,7 @@ if(model_name=='u2net'):
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Loading pretrained model from - ", output_model_dir)
-# net = nn.DataParallel(net)
+net = nn.DataParallel(net)
 if(os.path.exists(saved_model_dir_cur)):
     print("Loading model ...")
     net.load_state_dict(torch.load(saved_model_dir_cur))  
@@ -206,7 +206,7 @@ else:
 
 if torch.cuda.device_count() > 1:
     print("Using", torch.cuda.device_count(), "GPUs")
-    net = nn.DataParallel(net)
+    # net = nn.DataParallel(net)
     net.to(device)
 
 else:
