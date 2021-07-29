@@ -176,7 +176,7 @@ label_ext = '.jpg'
 
 # model_dir = './models/'
 saved_model_dir = './saved_models/u2net.pth'
-saved_model_dir_cur = './curr_output_models/u2net_size_720_bce_itr_42001_train_9.977481_tar_1.657276.pth'
+saved_model_dir_cur = './curr_output_models/u2net.pth'
 output_model_dir = "./curr_output_models/"
 if not os.path.exists(output_model_dir):
     # os.makedirs(output_model_dir)
@@ -200,7 +200,7 @@ if(os.path.exists(saved_model_dir_cur)):
     print("Loading model ...")
     net.load_state_dict(torch.load(saved_model_dir_cur))  
     print("model loaded")  
-    n=input() 
+
 else:
     print("Training model from scratch")   
 
