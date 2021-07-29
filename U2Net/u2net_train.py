@@ -199,7 +199,8 @@ print("Loading pretrained model from - ", output_model_dir)
 if(os.path.exists(saved_model_dir_cur)):
     print("Loading model ...")
     net.load_state_dict(torch.load(saved_model_dir_cur))  
-    print("model loaded")   
+    print("model loaded")  
+    n=input() 
 else:
     print("Training model from scratch")   
 
