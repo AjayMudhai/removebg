@@ -198,7 +198,8 @@ print("Loading pretrained model from - ", output_model_dir)
 # net = nn.DataParallel(net)
 if(os.path.exists(saved_model_dir_cur)):
     print("Loading model ...")
-    net.load_state_dict(torch.load(saved_model_dir_cur))     
+    net.load_state_dict(torch.load(saved_model_dir_cur))  
+    print("model loaded")   
 else:
     print("Training model from scratch")   
 
