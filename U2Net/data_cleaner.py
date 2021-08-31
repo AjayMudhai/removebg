@@ -7,7 +7,7 @@ def clean_data(src_pth,td_pth,dst_pth):
     c=1
     for root,dirs,files in os.walk(src_pth):
         for file in files:
-            print('{}/{}'.format(c,len(files))
+            print('{}/{}'.format(c,len(files)))
             op=os.path.join(td_pth,file)
             if os.path.exists(op):
                 nnp=os.path.join(dst_pth,file)
