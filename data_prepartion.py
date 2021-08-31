@@ -5,13 +5,13 @@ import shutil
 
 
 def namer(isrc_pth,idst_pth,msrc_pth,mdst_pth):
-    c=4000
+    c=0
     for root,dirs,files in os.walk(isrc_pth):
         for file in files:
             iop=os.path.join(root,file)
             mop=os.path.join(msrc_pth,file)
             if os.path.exists(mop):
-                name='{}.jpg'.format(c)
+                name='{}_new2.jpg'.format(c)
                 print(name)
                 c+=1
                 innp=os.path.join(idst_pth,name)
@@ -20,39 +20,11 @@ def namer(isrc_pth,idst_pth,msrc_pth,mdst_pth):
                 shutil.move(mop,mnnp)
 
         
-# isrc_pth='/datadrive/RemoveBG/data/data2/image2'
-# idst_pth='/datadrive/RemoveBG/data/im2'
-# msrc_pth='/datadrive/RemoveBG/data/data2/masks2'
-# mdst_pth='/datadrive/RemoveBG/data/msk2'
-
-# ###
-# namer(isrc_pth,idst_pth,msrc_pth,mdst_pth)
-
-
-def get_masks(isrc_pth,idst_pth,msrc_pth,mdst_pth):
-    c=6000
-    for root,dirs,files in os.walk(msrc_pth):
-        for file in files:
-            print('{}/{}'.format(c,len(files)))
-            mop=os.path.join(root,file)
-            iop=os.path.join(isrc_pth,file)
-            if os.path.exists(iop):
-                name='{}.jpg'.format(c)
-                c+=1
-                innp=os.path.join(idst_pth,name)
-                mnnp=os.path.join(mdst_pth,name)
-                shutil.move(mop,mnnp)
-                shutil.move(iop,innp)
-
-isrc_pth='/datadrive/RemoveBG/removebg/U2Net/data/olx/Images'
-idst_pth='/datadrive/RemoveBG/removebg/U2Net/data/Images'
-msrc_pth='/datadrive/RemoveBG/removebg/U2Net/data/olx/Masks'
-mdst_pth='/datadrive/RemoveBG/removebg/U2Net/data/Masks'
-get_masks(isrc_pth,idst_pth,msrc_pth,mdst_pth)
-
-
-
-        
+isrc_pth='/datadrive/RemoveBG/removebg/U2Net/data/test/test2/i2'
+idst_pth='/datadrive/RemoveBG/removebg/U2Net/data/images'
+msrc_pth='/datadrive/RemoveBG/removebg/U2Net/data/test/test2/m2'
+mdst_pth='/datadrive/RemoveBG/removebg/U2Net/data/masks'
+namer(isrc_pth,idst_pth,msrc_pth,mdst_pth)
 
 
 
